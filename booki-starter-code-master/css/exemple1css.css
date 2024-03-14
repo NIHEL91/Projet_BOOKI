@@ -1,0 +1,294 @@
+/****** General ***********/
+@media screen and (min-width: 1024px) {
+    * {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+/*.fa-solid {
+    color: var(--main-color);
+}*/
+
+body {
+    display: flex;
+    justify-content: center;
+}
+/***header****/
+/**********Logo***********/
+
+.logo {  width: 100px; /* la largeur */
+    height: auto; /* Régler la hauteur 'auto' pour conserver les proportions d'origine */
+}
+.header {
+    display: flex; /* Utilise Flexbox pour organiser les éléments */
+    justify-content: space-between; /* Aligne les éléments sur les extrémités de l'en-tête */
+    align-items: center; /* Centre les éléments verticalement */
+    padding: 20px; /* Ajoute un espace intérieur */
+  }
+
+}
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+/*************barre de recherche *************/
+.search-container .fa-location-dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);/***********?*******/
+    left: 10px; /* Ajustez la marge gauche pour l'icône */
+    height: auto; /* Réglez la hauteur sur auto pour que l'icône puisse redimensionner correctement */
+    font-size: 20px; /* Ajustez la taille de l'icône si nécessaire */
+    background-color: #ffffffe1;
+    border-radius: 10px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+
+/* pour colorier la localisation*/
+.fa-location-dot {color:rgb(14, 14, 14) !important;
+    border:1px ;
+    border-color: rgba(242, 242, 242, 1);
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    
+}
+.search-container {
+    position: relative;
+    display: inline-block; /* Assurez-vous que la barre de recherche s'adapte à la largeur de son contenu */
+}
+
+.search-container input[type="text"] {
+    padding-right: 50px; /* Ajoutez de la marge à droite pour le bouton */
+    padding-left: 30px; /* Ajustez la marge gauche pour laisser de l'espace pour l'icône */
+    border-radius: 10px;
+    padding-top:10px;
+    padding-bottom: 10px;
+
+
+}
+
+
+.search-container button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%; /* Ajustez la hauteur du bouton pour qu'elle corresponde à la barre de recherche */
+    background-color: #0065FC;
+    color:white;
+
+    
+}
+
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/**********************************/
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+/************Fitres*******************/
+.filtre {
+    border-radius: 25px;
+    border: 2px solid rgba(217, 217, 217, 1)
+    ; /* Ajoute une bordure grise de 1 pixel */
+    background-color: #f0f0f0; /* Ajoute une couleur de fond grise */
+    padding: 10px 20px; /* Ajoute un peu d'espace autour du texte */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    display: inline-block; /* Assure que le lien se comporte comme un bloc */
+}
+.fa-solid{
+    padding-right: 5px;
+    color: #0065FC;
+}
+
+.info {
+    margin-top: 40px;
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments en ligne */
+    align-items: center; /* Centre les éléments verticalement */
+
+    
+
+}
+
+.fa-info {
+    display: flex;
+    border: 1px solid #ccc; /* Ajoute une bordure grise de 1 pixel */
+    border-radius: 50%; /* Rend le conteneur de l'icône circulaire */
+    width: 40px; /* Définit une largeur pour le conteneur */
+    height: 40px; /* Définit une hauteur pour le conteneur */
+    justify-content: center; /* Centre l'icône horizontalement */
+    align-items: center; /* Centre l'icône verticalement */
+    margin-right: 10px; /* Ajoute de la marge à droite pour l'espace */
+}
+/*******************************/
+/****L'hebergement****/
+/**.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}*/
+.hebergements {
+    display:flex;
+    justify-content: space-between; /* Espace également les cartes horizontalement */
+    flex-wrap: wrap;/*Pour passer à la ligne si l'espace ne suffira pas */
+
+    width: 65%;
+    margin-top: 10px;
+
+}
+.card-hébergement {
+    border-radius:20px ;
+    width: 250.33px;
+    height: 207.25px;
+    padding: 5px;
+    background-color: white;
+}
+.img-hébergement {
+    border-radius: 15px;
+    width: 250.33px;
+    height: 124px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+}
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media screen and (max-width: 767px) {
+    /* ... */
+}

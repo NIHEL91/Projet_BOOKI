@@ -1,0 +1,551 @@
+/****** General ***********/
+/* Réinitialisation des marges et des rembourrages pour tous les éléments */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+
+html {/* Utilisation de box-sizing: inherit pour hériter du modèle de boîte défini par l'élément parent */
+
+    box-sizing: border-box;/* Assure que la largeur et la hauteur incluent le padding et la bordure */
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/********Logo*******/
+.logo {  
+    width: 61.09px; /* la largeur */
+    height: 19px;
+}
+.main-header {
+    display: flex; /* Utilise Flexbox pour organiser les éléments */
+    justify-content: space-between; /* Aligne les éléments sur les extrémités de l'en-tête */
+    align-items: center; /* Centre les éléments verticalement */
+    height: 79px; /*overflow A revoir */
+  }
+
+  /******Menu******/
+
+.menu ul {
+    display: flex; /* Utilise Flexbox pour organiser les éléments de la liste horizontalement */
+    list-style-type: none; /* Supprime les puces de la liste */
+    gap:68px;
+}
+.menu  ul li {
+/*margin-right: 68px; /* Espacement entre chaque élément li */
+font-family: 'Raleway' sans-serif;
+
+}    
+.menu ul li {
+    position: relative; /* Position relative pour faciliter le positionnement de la sous-ligne */
+    /*flex: 1 1 auto;*/
+
+}
+.menu ul li::before {
+    content: ''; /* Ajoute un contenu vide */
+    position: absolute; /* Position absolue par rapport à l'élément parent */
+    top: -20px; /* Distance de la sous-ligne par rapport au bas de l'élément li */
+    left: 0; /* Alignement de la sous-ligne sur la gauche */
+    right: 0;
+    bottom: 0;
+    ; /* Longueur de la sous-ligne */
+    height: 2px; /* Épaisseur de la sous-ligne */
+    background-color: rgba(242, 242, 242, 1);
+}
+.menu ul li:hover::before {
+    background-color: #0065FC; /* Changer la couleur de la ligne lorsqu'il est survolé */
+}
+  
+/* Styles à appliquer lorsque survolé */
+.menu ul li:hover {
+  color:rgba(0, 101, 252, 1);
+}
+/*********************************/
+
+/*************barre de recherche *************/
+.introduction{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.barre-recherche {
+    display: flex;
+    align-items:  center;
+   
+}
+
+.barre-recherche input {
+   /* padding-left: 30px; /* Assure un espace pour l'icône à gauche */
+    width:fixed(377px) ;
+    height: 49px;
+    border: 1px rgba(242, 242, 242, 1);
+}
+
+.barre-recherche .search-button {
+    border-radius: 0 15px 15px 0; /* Arrondi uniquement le coin droit */
+    background: rgba(0, 101, 252, 1);
+    cursor: pointer;
+    width:  132px;
+    height:49px;
+    border-left: none; /* Supprime la bordure droite pour le bouton */
+    color: white;
+    font-size: 18px;
+    font-weight: bold; /* Appliquer l'effet gras */
+
+}
+
+.barre-recherche .fa-location-dot {
+    height: 49px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(242, 242, 242, 1);
+    outline: none;
+    border: solid 1px #F2F2F2;
+    color:rgb(14, 14, 14);
+    border-radius: 15px 0 0 15px; /* Arrondi uniquement le coin droit */
+}
+
+.fa-location-dot {
+    width: 14px;
+    height: 18px;
+}
+
+.barre-recherche button {
+    border-radius: 0 15px 15px 0; /* Arrondi uniquement le coin droit */
+    background: rgba(0, 101, 252, 1);
+    cursor: pointer;
+    width:  132px;
+    height:49px;
+    border-left: none; /* Supprime la bordure droite pour le bouton */
+    color: white;
+}
+
+/*************filtre******/
+.filtre {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+
+}
+
+.lienfiltre {
+    border-radius: 25px;
+    border: 2px solid rgba(217, 217, 217, 1)
+    ; /* Ajoute une bordure grise de 1 pixel */
+    padding: 10px 20px; /* Ajoute un peu d'espace autour du texte */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    display: inline-block; /* Assure que le lien se comporte comme un bloc */
+     align-items:center;
+     font-weight: bold;
+}
+
+.lienfiltre:hover {
+    /* Styles à appliquer lorsque survolé */
+    background-color: rgba(222, 235, 255, 1)
+
+}
+
+.lienfiltre .fa-solid {
+    margin-right: 10px;
+}
+
+
+.info {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments en ligne */
+    align-items: center; /* Centre les éléments verticalement */
+    gap:10px;
+    margin-bottom: 35px;
+}
+/****************l'icone i*****/
+.fa-info {
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 50%; /* Arrondissez les coins pour créer un cercle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .main-container {
+    max-width: 1440px;
+    box-sizing: border-box;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/****** Hebergements And Populaires ***********/
+
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+
+.hebergements-cards a {
+    flex: 1 1 250px;
+}
+.hebergements {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hebergements-cards {
+    display: flex;
+    align-items: center;
+    gap:30px;
+    flex-wrap: wrap;/*Pour passer à la ligne si l'espace ne suffira pas */
+
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+
+}
+
+.affichage {
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.hebergements .card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: (0px 3px 15px rgba(0, 0, 0, 0.1));
+    
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+article .card-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 5px;
+}
+
+.hebergements-cards .card-rating {
+    margin: 5px;
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 146px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+.image  {
+    border-radius: 20px 20px 0px 0px;
+    width:100%;
+    height: 124px;
+}
+/************Activité********/
+.image-activite {
+    border-radius: 20px 20px 0px 0px;
+    width: 297.5px;
+    height:380px;
+}
+
+.activite {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+   
+}
+.activite-cards {
+    display: flex;
+    justify-content: space-between;   
+    flex-wrap: wrap;/*Pour passer à la ligne si l'espace ne suffira pas */
+}
+.card-act {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border: 5px;
+    width: 297.5px;
+    height: 439px;
+}
+
+.activite-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+      
+
+}
+
+/*************footer**********/
+
+.footer {
+    display: flex;
+    align-items: center; /*Pour aligner verticalement les éléments sur la lign*/
+    background-color: rgba(242, 242, 242, 1);
+    padding:20px;
+}
+
+/* Définit la largeur de chaque élément */
+.apropos, .assistance , .nos-hebergements{
+    flex-basis: 35%; 
+}
+
+/*********Pour l'espacement entre les paragraphes ***********/
+article .card-txt {
+    display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+/**********************************/
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+   
+    .filtre {
+        flex-direction: column; /* Changer la direction en colonne */
+        align-items: flex-start; /* Aligner les éléments sur le côté gauche */
+    }
+    .lien {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:10px;
+}
+    
+   
+   
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+    }
+
+    .hebergements-cards {
+        display: flex;
+        align-items: center;
+        gap:30px;
+        flex-wrap: wrap;/*Pour passer à la ligne si l'espace ne suffira pas */
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+.card-act {
+    width: 193.5px;
+    height: 270px;
+}
+
+.image-activite {
+    width: 193.5px;
+    height:200px;
+}
+article .card-txtact {
+    margin: 10px;
+}
+}
+
+
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /*****logo*****/
+header {
+    display: flex;
+    align-items:center ;
+    flex-direction: column;
+    height: 115px;
+
+    
+}
+.menu {
+    width: 100%;
+}
+.menu ul {
+    display: flex; /* Utilise Flexbox pour organiser les éléments de la liste horizontalement */
+    gap:0;
+}
+.menu ul li::before {
+        display: none;
+      }
+
+.menu ul li {
+    position: relative; /* Position relative pour faciliter le positionnement de la sous-ligne */
+    padding-bottom:15px;
+    flex: 1 1 auto;
+    text-align: center;
+}
+.menu ul li::after {
+    content: ''; /* Ajoute un contenu vide */
+    position: absolute; /* Position absolue par rapport à l'élément parent */
+    bottom: 0; /* Distance de la sous-ligne par rapport au bas de l'élément li */
+    left: 0; /* Alignement de la sous-ligne sur la gauche */
+    /* Longueur de la sous-ligne */
+    height: 2px; /* Épaisseur de la sous-ligne */
+    width: 400px;
+    background-color: rgba(242, 242, 242, 1);
+    
+     /* Couleur de la sous-ligne */
+}
+.menu ul li:hover::after {
+    background-color: #0065FC; /* Changer la couleur de la ligne lorsqu'il est survolé */
+}
+.introduction {
+    width: 335px;
+    ; /* Ajouter une largeur maximale */
+    margin:  auto; /* Centrer la section horizontalement */
+    gap:0;
+}
+
+.filtre {
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: row;  
+    flex-wrap: wrap;  
+    gap: 20px;
+}
+.filtre h3 {
+    width: 100%;
+}
+.filtre a {
+font-size: 14px;
+}
+.hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse; /* Inverser l'ordre des éléments */
+      }
+.populaires-cards {
+    width: 335px;
+    height: 146px
+    ;
+}
+}
