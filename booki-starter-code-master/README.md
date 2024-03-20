@@ -1,1 +1,1 @@
-NIHEL91/Projet_BOOKI/edit/master/booki-starter-code-master/
+https://github.com/NIHEL91/Projet_BOOKI/tree/master/booki-starter-code-master
